@@ -170,3 +170,6 @@ Signals logged to the workspace by `quartercar_RL_6_no_G.slx`:
 - The training scripts follow the DDPG pendulum swing-up example of Reinforcement Learning Toolbox, and their last lines still name `SimulinkPendulumDDPG.mat`.
 - The archived model sets `Rho 2` to 0, reads the agent from a variable named `agent`, and stops at 5 s.
 - The figures come from the KSME 2023 slides, the manuscript drafts and a screen recording made during training.
+- The random road input was set up in September 2023 as an ISO 8608 class C road profile; the class is named in my working notes, not in the model.
+- From February to April 2024, after the manuscript, I retuned the PID baseline with the Ziegler–Nichols method and designed a fuzzy PID controller for comparison on the same three roads; those models are not included.
+- That fuzzy controller takes the error and its change as inputs with seven membership functions each, uses 49 rules and outputs the gains `Kp`, `Ki` and `Kd`.
